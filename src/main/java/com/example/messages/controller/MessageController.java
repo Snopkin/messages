@@ -1,7 +1,7 @@
 package com.example.messages.controller;
 
-import com.example.messages.model.MessageDto;
-import com.example.messages.model.MessageEntity;
+import com.example.messages.model.request.NewMessageRequest;
+import com.example.messages.model.entities.MessageEntity;
 import com.example.messages.service.MessagesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,8 +20,8 @@ public class MessageController {
     }
 
     @PostMapping("/save")
-    public String saveMessage(@RequestBody MessageDto newMessage) {
-        MessageEntity savedMessage =  messageService.saveMessage(newMessage);
+    public String saveMessage(@RequestBody NewMessageRequest newMessage) {
+        MessageEntity savedMessage = messageService.saveMessage(newMessage);
         return String.format("Message saved! %s", savedMessage);
     }
 

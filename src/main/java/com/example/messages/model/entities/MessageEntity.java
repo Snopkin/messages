@@ -1,4 +1,4 @@
-package com.example.messages.model;
+package com.example.messages.model.entities;
 
 
 import jakarta.persistence.Entity;

@@ -1,4 +1,4 @@
-package com.example.messages.model;
+package com.example.messages.model.request;
 
 import lombok.*;
 
@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class MessageDto {
+public class NewMessageRequest {
     String message;
     LocalDateTime timeStamp;
 }

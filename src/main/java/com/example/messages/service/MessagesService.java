@@ -1,7 +1,7 @@
 package com.example.messages.service;
 
-import com.example.messages.model.MessageDto;
-import com.example.messages.model.MessageEntity;
+import com.example.messages.model.request.NewMessageRequest;
+import com.example.messages.model.entities.MessageEntity;
 import com.example.messages.repo.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ public class MessagesService {
         this.messageRepository = messageRepository;
     }
 
-    public MessageEntity saveMessage(MessageDto newMessage) {
+    public MessageEntity saveMessage(NewMessageRequest newMessage) {
         // todo save message logic
         return messageRepository.save(new MessageEntity(newMessage.getMessage(), newMessage.getTimeStamp()));
     }

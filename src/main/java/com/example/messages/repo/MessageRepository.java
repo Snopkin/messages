@@ -1,7 +1,6 @@
 package com.example.messages.repo;
 
-import com.example.messages.model.MessageDto;
-import com.example.messages.model.MessageEntity;
+import com.example.messages.model.entities.MessageEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
